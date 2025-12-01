@@ -1,29 +1,155 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>КотМода™ - Одежда для тех, кто жуёт интернет!</title>
     <style>
-        body { font-family: 'Comic Sans MS', cursive; background: linear-gradient(45deg, #ff69b4, #00ff00, #ff0000); color: #333; margin: 0; padding: 20px; animation: rainbow 3s infinite; }
-        @keyframes rainbow { 0% { filter: hue-rotate(0deg); } 100% { filter: hue-rotate(360deg); } }
-        h1 { text-align: center; font-size: 3em; text-shadow: 3px 3px 0 #fff; }
-        .product { background: rgba(255,255,255,0.8); margin: 20px; padding: 20px; border-radius: 20px; box-shadow: 10px 10px 0 #000; }
-        .image-placeholder { width: 300px; height: 300px; border: 5px dashed #ff00ff; margin: 10px auto; display: block; background: #eee; font-size: 1.2em; text-align: center; line-height: 300px; }
-        ul { list-style: none; padding: 0; }
-        li:before { content: "😹 "; }
-        button { background: #ff4500; color: white; border: none; padding: 15px 30px; font-size: 1.5em; border-radius: 50px; cursor: pointer; animation: bounce 1s infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #ff69b4, #00ff00, #ff0000);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            animation: rainbow 3s infinite;
+        }
+        @keyframes rainbow {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            text-shadow: 3px 3px 0 #fff;
+            margin-bottom: 40px;
+        }
+        .product {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 0 #000;
+            max-width: 350px;
+            position: relative;
+            overflow: visible;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li:before {
+            content: "😹 ";
+        }
+        button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            animation: bounce 1s infinite;
+            margin-top: 10px;
+        }
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 10px auto 20px;
+        }
+        img.product-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            border: 5px solid #ff00ff;
+            box-shadow: 0 0 15px #ff00ff;
+            object-fit: cover;
+        }
+        /* SVG cдвиги и эффекты */
+        svg.sticker {
+            position: absolute;
+            pointer-events: none;
+            user-select: none;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        /* разные размеры и позиции сдвигов для стикеров */
+        .sticker1 {
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            animation-delay: 0s;
+        }
+        .sticker2 {
+            top: 220px;
+            left: 240px;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0.7s;
+        }
+        .sticker3 {
+            top: 130px;
+            left: -30px;
+            width: 35px;
+            height: 35px;
+            animation-delay: 1.4s;
+        }
+        .sticker4 {
+            top: 280px;
+            left: 120px;
+            width: 30px;
+            height: 30px;
+            animation-delay: 2.0s;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            font-style: italic;
+            color: #222;
+        }
     </style>
 </head>
 <body>
     <h1>КотМода™ - Мода для котов-жуликов интернета!</h1>
-    
+
     <div class="product">
         <h2>КотЖеватель Pro - Футболка для хакеров-мяукающих</h2>
         <p>Ваша одежда теперь жуёт кабели быстрее, чем вы скачиваете мемы! Носи и чувствуй себя королём локалки. WiFi? Пфф, мы на проводе, как настоящие коты 90-х!</p>
-        <!-- ВСТАВЬТЕ ИЗОБРАЖЕНИЕ 1 ЗДЕСЬ: замените src на путь к вашему фото кота на футболке -->
-        <img class="image-placeholder" src="https://via.placeholder.com/300x300/ff69b4/fff?text=Фото+1+сюда" alt="Кот на футболке">
+        <div class="image-container">
+            <!-- ВСТАВЬТЕ ИЗОБРАЖЕНИЕ 1 ЗДЕСЬ -->
+            <img class="product-img" src="kotinternet1.png" alt="Кот на футболке" />
+            <!-- SVG сдвиги -->
+            <svg class="sticker sticker1" viewBox="0 0 24 24" fill="#ff00ff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L15 10H9L12 2Z"/>
+                <circle cx="12" cy="16" r="4" />
+            </svg>
+            <svg class="sticker sticker3" viewBox="0 0 24 24" fill="#00ffff" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="6" width="12" height="12" rx="3" ry="3"/>
+            </svg>
+        </div>
         <ul>
             <li>Материал: 100% нейлон от старых модемов</li>
             <li>Размер: От мыши до слона (подходит всем питомцам)</li>
@@ -35,8 +161,16 @@
     <div class="product">
         <h2>КабельМуфта Deluxe - Толстовка с зубами</h2>
         <p>Зубы на капюшоне кусаются за USB! Идеально для тех, кто путает Ethernet с ужином. Мойте в микроволновке для супер-эффекта.</p>
-        <!-- ВСТАВЬТЕ ИЗОБРАЖЕНИЕ 2 ЗДЕСЬ: замените src на путь к вашему второму фото -->
-        <img class="image-placeholder" src="https://via.placeholder.com/300x300/00ff00/fff?text=Фото+2+сюда" alt="Кот на толстовке">
+        <div class="image-container">
+            <!-- ВСТАВЬТЕ ИЗОБРАЖЕНИЕ 2 ЗДЕСЬ -->
+            <img class="product-img" src="kotinternet2.png" alt="Кот на толстовке" />
+            <svg class="sticker sticker2" viewBox="0 0 24 24" fill="#ff4500" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L17 21H7L12 2Z" />
+            </svg>
+            <svg class="sticker sticker4" viewBox="0 0 24 24" fill="#ffd700" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="5" />
+            </svg>
+        </div>
         <ul>
             <li>Цвет: Радужный, как сбойный роутер</li>
             <li>Защита: От антивирусов и собачьих взглядов</li>
@@ -48,8 +182,16 @@
     <div class="product">
         <h2>ИнтернетЗубастый Hoodie - Худи для байт-охотников</h2>
         <p>Жуй гигабайты стиля! Эта худи делает вас невидимым для модемов. Бонус: светится в темноте, как ошибка 404.</p>
-        <!-- ВСТАВЬТЕ ИЗОБРАЖЕНИЕ 3 ЗДЕСЬ: замените src на путь к третьему фото -->
-        <img class="image-placeholder" src="https://via.placeholder.com/300x300/ff0000/fff?text=Фото+3+сюда" alt="Кот на худи">
+        <div class="image-container">
+            <!-- ВСТАВЬТЕ ИЗОБРАЖЕНИЕ 3 ЗДЕСЬ -->
+            <img class="product-img" src="kotinternet3.png" alt="Кот на худи" />
+            <svg class="sticker sticker1" viewBox="0 0 24 24" fill="#00ff00" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20V20H4z" />
+            </svg>
+            <svg class="sticker sticker3" viewBox="0 0 24 24" fill="#ff00ff" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="12,2 19,21 5,21" />
+            </svg>
+        </div>
         <ul>
             <li>Карманы: Для хранения роутеров</li>
             <li>Дизайн: Кот с Photoshop-усами из кабеля</li>
@@ -61,8 +203,16 @@
     <div class="product">
         <h2>МяуFi Bomber - Бомбер для жующих чемпионов</h2>
         <p>Взрывай интернет стилем! Молнии из оптоволокна, подкладка - обкусанные патчи. Носи и рви пинг на части!</p>
-        <!-- ВСТАВЬТЕ ИЗОБРАЖЕНИЕ 4 ЗДЕСЬ: замените src на путь к четвёртому фото -->
-        <img class="image-placeholder" src="https://via.placeholder.com/300x300/ffff00/000?text=Фото+4+сюда" alt="Кот на бомбере">
+        <div class="image-container">
+            <!-- ВСТАВЬТЕ ИЗОБРАЖЕНИЕ 4 ЗДЕСЬ -->
+            <img class="product-img" src="kotinternet4.png" alt="Кот на бомбере" />
+            <svg class="sticker sticker2" viewBox="0 0 24 24" fill="#ff69b4" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="8" r="4" />
+            </svg>
+            <svg class="sticker sticker4" viewBox="0 0 24 24" fill="#00ffff" xmlns="http://www.w3.org/2000/svg">
+                <rect x="7" y="7" width="10" height="10" rx="2" ry="2" />
+            </svg>
+        </div>
         <ul>
             <li>Вентиляция: Дыры от зубов кота</li>
             <li>Стиль: Глитч-арт 2025</li>
@@ -71,8 +221,8 @@
         <button onclick="alert('Бомбер взорвал ваш бюджет! 💥😸')">ПОКУПАЙ БЫСТРО</button>
     </div>
 
-    <footer style="text-align: center; margin-top: 40px; font-size: 0.8em;">
+    <footer>
         © 2025 КотМода™. Все кабели жуют только наши коты. Не для людей без усов!
     </footer>
 </body>
-</html>
+    </html>
