@@ -79,6 +79,27 @@
             height: 350px;
             margin: 0 auto 20px;
         }
+        .arrow-side {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 10;
+    animation: arrowBounce 1.5s infinite;
+}
+
+.arrow-left1, .arrow-left2, .arrow-left3 {
+    transform: rotate(180deg); /* поворот на 180 градусов */
+}
+
+.arrow-left1 { top: 10%; left: -120px; }
+.arrow-left2 { top: 40%; left: -140px; }
+.arrow-left3 { top: 70%; left: -110px; }
+
+.arrow-right1 { top: 15%; right: -130px; }
+.arrow-right2 { top: 50%; right: -120px; }
+.arrow-right3 { top: 80%; right: -150px; }
+
         img.product-img {
             width: 350px;
             height: 350px;
