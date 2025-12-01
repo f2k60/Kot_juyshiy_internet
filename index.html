@@ -25,48 +25,6 @@
             text-shadow: 3px 3px 0 #fff;
             margin-bottom: 40px;
         }
-        .left-arrows-wrapper {
-    position: absolute;
-    left: -120px;
-    top: 0;
-    height: 100%;
-    transform: rotate(180deg); /* поворот всей группы стрелок */
-    pointer-events: none;
-    z-index: 10;
-}
-
-.left-arrows-wrapper img {
-    display: block;
-    width: 100px;
-    height: 100px;
-    animation: arrowBounce 1.5s infinite;
-    margin: 10% 0;
-}
-
-@keyframes arrowBounce {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.3); }
-}
-
-/* Правые стрелки без поворота, аналогично */
-
-.right-arrows-wrapper {
-    position: absolute;
-    right: -130px;
-    top: 0;
-    height: 100%;
-    pointer-events: none;
-    z-index: 10;
-}
-
-.right-arrows-wrapper img {
-    display: block;
-    width: 100px;
-    height: 100px;
-    animation: arrowBounce 1.5s infinite;
-    margin: 10% 0;
-}
-
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -171,34 +129,43 @@
             100% { transform: scale(1); opacity: 0.8; }
         }
         /* Стрелочки по бокам */
-        .arrow-side {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            pointer-events: none;
-            z-index: 10;
-            animation: arrowBounce 1.5s infinite;
-        }
-        @keyframes arrowBounce {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.3) rotate(5deg); }
-        }
-        /* Большое количество стрелок слева повернуты на 180 градусов */
-        .arrow-left1, .arrow-left2, .arrow-left3, .arrow-left4, .arrow-left5, .arrow-left6 {
-            transform: rotate(180deg);
-        }
-        .arrow-left1 { top: 5%; left: -120px; }
-        .arrow-left2 { top: 20%; left: -140px; }
-        .arrow-left3 { top: 40%; left: -110px; }
-        .arrow-left4 { top: 60%; left: -130px; }
-        .arrow-left5 { top: 80%; left: -115px; }
-        .arrow-left6 { top: 90%; left: -125px; }
-        .arrow-right1 { top: 10%; right: -130px; }
-        .arrow-right2 { top: 30%; right: -120px; }
-        .arrow-right3 { top: 50%; right: -150px; }
-        .arrow-right4 { top: 70%; right: -110px; }
-        .arrow-right5 { top: 85%; right: -135px; }
-        .arrow-right6 { top: 95%; right: -100px; }
+.arrow-side {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 10;
+    animation: arrowBounce 1.5s infinite;
+}
+@keyframes arrowBounce {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.3) rotate(5deg); }
+}
+/* Большое количество стрелок слева повернуты на 180 градусов */
+.arrow-left1, .arrow-left2, .arrow-left3, .arrow-left4, .arrow-left5, .arrow-left6 {
+    animation: arrowBounceLeft 1.5s infinite;
+}
+@keyframes arrowBounceLeft {
+    0%, 100% { transform: scale(1) rotate(180deg); }
+    50% { transform: scale(1.3) rotate(185deg); }
+}
+.arrow-left1 { top: 5%; left: -120px; }
+.arrow-left2 { top: 20%; left: -140px; }
+.arrow-left3 { top: 40%; left: -110px; }
+.arrow-left4 { top: 60%; left: -130px; }
+.arrow-left5 { top: 80%; left: -115px; }
+.arrow-left6 { top: 90%; left: -125px; }
+
+/* Стрелки справа используют обычную анимацию */
+.arrow-right1, .arrow-right2, .arrow-right3, .arrow-right4, .arrow-right5, .arrow-right6 {
+    animation: arrowBounce 1.5s infinite;
+}
+.arrow-right1 { top: 10%; right: -130px; }
+.arrow-right2 { top: 30%; right: -120px; }
+.arrow-right3 { top: 50%; right: -150px; }
+.arrow-right4 { top: 70%; right: -110px; }
+.arrow-right5 { top: 85%; right: -135px; }
+.arrow-right6 { top: 95%; right: -100px; }
         /* Слова по бокам */
         .side-text {
             position: fixed;
